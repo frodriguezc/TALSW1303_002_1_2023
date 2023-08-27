@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Uso bootstrap para la reactividad de la página que contiene el formulario -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css
+            " rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <title>Formulario de Registro - Santiago Seguros</title>
+
+    </head>
+    <body>
+
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Formulario de Registro - Santiago Seguros</h2>
+            <!-- la acción será visualizar el detalle de pólizas de forma estática, con fines de mockup -->
+            <form action="polizas.html" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono ">Teléfono: (últimos 9 digitos)</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" required pattern="[0-9]{9}">
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="correo" name="correo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo_seguro">Tipo de Seguro:</label>
+                    <select class="form-control" id="tipo_seguro" name="tipo_seguro" required>
+                        <option value="salud">Todos</option>
+                        <option value="salud">Vida</option>
+                        <option value="salud">Salud</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
